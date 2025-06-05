@@ -30,8 +30,11 @@
         compatible = "nice_view,display";
         reg = <0 0 0>;
         spi-max-frequency = <8000000>;
-        // optional GPIOs:
-        // reset-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
-        // dc-gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
+
+        ls0xx@0 {
+            compatible = "nice,ls0xx";
+            reg = <0 0 0>;  // This must also match #address-cells + #size-cells (3 cells)
+            // other properties as needed
+        };
     };
 };
