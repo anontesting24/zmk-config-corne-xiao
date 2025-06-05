@@ -32,9 +32,12 @@
         spi-max-frequency = <8000000>;
 
         ls0xx@0 {
-            compatible = "nice,ls0xx";  // or appropriate compatible string
-            reg = <0 0 0>;             // must have 3 cells: 2 for address + 1 for size
-            // Add any other required properties here
+            compatible = "nice,ls0xx";
+            reg = <0 0 0>;
+            reset-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+            dc-gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
+            // any other properties your device requires
         };
     };
 };
+
