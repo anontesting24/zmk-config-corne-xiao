@@ -27,10 +27,10 @@
     status = "okay";
 
     nice_view_spi: nice_view_spi@0 {
-        compatible = "nice_view,display";  // Use the compatible string your nice_view driver expects
-        reg = <0>;                        // chip select 0
-        spi-max-frequency = <8000000>;   // or appropriate frequency
-        // Optionally specify control GPIOs (reset, dc) here if required by your display
+        compatible = "nice_view,display";
+        reg = <0 0 0>;
+        spi-max-frequency = <8000000>;
+        // optional GPIOs:
         // reset-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
         // dc-gpios = <&gpio0 14 GPIO_ACTIVE_HIGH>;
     };
