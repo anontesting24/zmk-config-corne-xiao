@@ -8,22 +8,6 @@
     col-offset = <6>;
 };
 
-&spi0 {
-    status = "okay";
-
-    nice_view_spi: nice_view_spi@0 {
-        compatible = "nice_view,display";
-        reg = <0 0 1>;
-        spi-max-frequency = <8000000>;
-
-        ls0xx@0 {
-            compatible = "nice,ls0xx";
-            reg = <0 0 1>;
-        };
-    };
-};
-
-
 &kscan0 {
     col-gpios
         = <&xiao_d 6 GPIO_ACTIVE_HIGH>
