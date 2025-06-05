@@ -1,6 +1,6 @@
 #include "corne_xiao_v2.dtsi"
 
-&spi0 {
+&spi2 {
     status = "okay";
 
     nice_view_spi: nice_view_spi@0 {
