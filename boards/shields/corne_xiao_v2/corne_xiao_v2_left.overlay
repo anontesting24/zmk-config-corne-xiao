@@ -10,7 +10,7 @@
 
         ls0xx@0 {
             compatible = "nice,ls0xx";
-            reg = <0>;
+            reg = <0 0 0>;
         };
     };
 };
