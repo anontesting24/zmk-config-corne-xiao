@@ -13,24 +13,18 @@
 };
 
 &spi0 {
-    cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>; // Replace 2 with CS pin
-    sck-pin = <13>; // SCK
-    mosi-pin = <11>; // MOSI
-    miso-pin = <12>; // Not used by Nice!View, but must be defined if required
-nice_view_spi: nice_view_spi@0 {
-        compatible = "zmk,nice-view";
-        reg = <0>;
+    status = "okay";
+
+    nice_view_spi: nice_view_spi@0 {
+        compatible = "nice_view,display";
+        reg = <0 0 1>;
         spi-max-frequency = <8000000>;
-        label = "NiceView";
-
-        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;  // Your actual RST pin
-        cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;      // CS matches SPI
-        dc-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;      // Your actual DC pin
-
+        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
+        cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+        dc-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
         width = <128>;
         height = <32>;
     };
-
 };
 
 / {
