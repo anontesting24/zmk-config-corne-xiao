@@ -32,9 +32,9 @@
         spi-max-frequency = <8000000>;
 
         ls0xx@0 {
-            compatible = "nice,ls0xx";
-            reg = <0 0 0>;  // This must also match #address-cells + #size-cells (3 cells)
-            // other properties as needed
+            compatible = "nice,ls0xx";  // or appropriate compatible string
+            reg = <0 0 0>;             // must have 3 cells: 2 for address + 1 for size
+            // Add any other required properties here
         };
     };
 };
