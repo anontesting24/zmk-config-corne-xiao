@@ -15,7 +15,7 @@
 &spi1 {
     status = "okay";
 
-    nice_view: display@0 {
+    nice_view_spi: display@0 {
         compatible = "sharp,ls013b7dh06";
         reg = <0>;  // only 1 cell
         label = "NiceView";
@@ -29,7 +29,7 @@
     chosen {
       zmk,kscan = &kscan0;
       zmk,physical-layout = &corne_xiao_6col_layout;
-      zmk,display = &nice_view;
+      zmk,display = &nice_view_spi;
     };
 
     default_transform: keymap_transform_0 {
