@@ -20,7 +20,7 @@
 
     nice_view_spi: display@0 {
         compatible = "solomon,ssd1306fb";
-        reg = <0x0 0x0 0x1000>;;
+        reg = <0x0 0x0 0x1000>;
         label = "NiceView";
         spi-max-frequency = <8000000>;
         cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
