@@ -12,23 +12,6 @@
     transform = <&five_column_transform>;
 };
 
-&spi2 {
-    #address-cells = <1>;
-    #size-cells = <0>;
-    status = "okay";
-
-    nice_view_spi: nice_view_spi@0 {
-        compatible = "nice_view,display";
-        reg = <0>;  // only 1 cell because #address-cells=1 and #size-cells=0
-        spi-max-frequency = <8000000>;
-        reset-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>;
-        cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
-        dc-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
-        width = <128>;
-        height = <32>;
-    };
-};
-
 / {
     chosen {
       zmk,kscan = &kscan0;
