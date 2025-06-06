@@ -19,7 +19,7 @@
     pinctrl-1 = <&spi2_sleep>;  // New line added
 
     nice_view_spi: display@0 {
-        compatible = "sharp,ls013b7dh06";
+        compatible = "ssd1306fb";
         reg = <0>;
         label = "NiceView";
         spi-max-frequency = <8000000>;
