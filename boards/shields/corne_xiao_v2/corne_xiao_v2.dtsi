@@ -16,13 +16,12 @@
     status = "okay";
 
     nice_view_spi: nice_view@0 {
-        compatible = "sitronix,st7735r"; // or appropriate driver
-        reg = <0>;
+        compatible = "sitronix,st7735r";
+        reg = <0x00000000 0x00000000 0x00000010>;  // 2 address cells + 1 size cell
         spi-max-frequency = <8000000>;
+        cs-gpios = <&gpio1 5 GPIO_ACTIVE_LOW>;
+        reset-gpios = <&gpio1 6 GPIO_ACTIVE_LOW>;
         label = "NiceView";
-        cs-gpios = <&gpio1 5 GPIO_ACTIVE_LOW>; // Adjust to your wiring
-        reset-gpios = <&gpio1 6 GPIO_ACTIVE_LOW>; // Adjust as needed
-        // more properties as needed
     };
 };
 
