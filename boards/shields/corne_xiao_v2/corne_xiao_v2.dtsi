@@ -28,10 +28,6 @@
     };
 };
 
-&chosen {
-    zmk,display = &nice_view_spi;
-};
-
 / {
     chosen {
       zmk,kscan = &kscan0;
