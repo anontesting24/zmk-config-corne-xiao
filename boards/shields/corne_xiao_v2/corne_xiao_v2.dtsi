@@ -29,7 +29,7 @@
     chosen {
       zmk,kscan = &kscan0;
       zmk,physical-layout = &corne_xiao_6col_layout;
-      zmk,display = &nice_view_spi;
+      zmk,display = &nice_view;
     };
 
     default_transform: keymap_transform_0 {
