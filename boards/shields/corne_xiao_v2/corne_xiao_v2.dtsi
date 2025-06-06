@@ -17,7 +17,7 @@
 
     nice_view_spi: display@0 {
         compatible = "sharp,ls013b7dh06";
-        reg = <0>;  // only 1 cell
+        reg = <0 0 0>;  // only 1 cell
         label = "NiceView";
         spi-max-frequency = <8000000>;
         cs-gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
