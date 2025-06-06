@@ -12,11 +12,11 @@
     transform = <&five_column_transform>;
 };
 
-&spi2 {
+&spi1 {
     status = "okay";
     pinctrl-names = "default", "sleep";
-    pinctrl-0 = <&spi2_default>;
-    pinctrl-1 = <&spi2_sleep>;  // New line added
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;  // New line added
 
     nice_view_spi: display@0 {
         compatible = "solomon,ssd1306fb";
