@@ -22,9 +22,11 @@ config SPI
     default y
 
 config SSD1306
+    bool "Enable SSD1306 Display Driver"
     default y
 
 config SSD1306_SPI
+    bool "Enable SSD1306 SPI support"
     default y
 
 config DISPLAY
