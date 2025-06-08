@@ -117,13 +117,14 @@ nice_view_spi: &spi0 {
 &nice_view_spi {
 	status = "okay";
 	sharp: ls0xx@0 {
-		compatible = "sharp,ls0xx";
+		compatible = "sharp,ls013b7dh03";
 		label = "DISPLAY";
 		spi-max-frequency = <2000000>;
 		reg = <0>;
 		width = <160>;
 		height = <68>;
 		disp-en-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; //testing setting this to 6 from 23
+		extcomin-gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
 	};
 };
 
