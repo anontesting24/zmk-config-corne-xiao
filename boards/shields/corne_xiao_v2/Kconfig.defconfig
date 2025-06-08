@@ -21,12 +21,9 @@ if ZMK_DISPLAY
 config SPI
     default y
 
-config SSD1306
-    bool "Enable SSD1306 Display Driver"
-    default y
-
-config SSD1306_SPI
-    bool "Enable SSD1306 SPI support"
+# Enable Sharp LS013B7DH03 driver instead
+config SHARP_LS013B7DH03
+    bool "Enable Sharp LS013B7DH03 Display Driver"
     default y
 
 config DISPLAY
