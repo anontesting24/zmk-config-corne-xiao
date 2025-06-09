@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: rumburack/zmk/.github/workflows/build-user-config.yml@nice-view
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
