@@ -1,11 +1,9 @@
 if SHIELD_CORNE_XIAO_V2_LEFT
 
 config ZMK_KEYBOARD_NAME
-    string
     default "Corne"
 
 config ZMK_SPLIT_ROLE_CENTRAL
-    bool
     default y
 
 endif
@@ -13,51 +11,6 @@ endif
 if SHIELD_CORNE_XIAO_V2_LEFT || SHIELD_CORNE_XIAO_V2_RIGHT
 
 config ZMK_SPLIT
-    bool
     default y
 
-config ZMK_DISPLAY
-    bool
-    default y
-    select LV_FONT_MONTSERRAT_26
-    select SHARP_MEMLCD
-    select DISPLAY
-    select GPIO
-    select SPI
-
-config SHARP_MEMLCD
-    bool
-    default y
-
-config DISPLAY
-    bool
-    default y
-
-config GPIO
-    bool
-    default y
-
-config SPI
-    bool
-    default y
-
-config LV_Z_BITS_PER_PIXEL
-    int
-    default 1
-
-choice LV_COLOR_DEPTH
-    prompt "LVGL color depth"
-    default LV_COLOR_DEPTH_1
-    config LV_COLOR_DEPTH_1
-        bool "1-bit color"
-endchoice
-
-config LV_DPI_DEF
-    int
-    default 30
-
-config LV_Z_VDB_SIZE
-    int
-    default 16
-
-endif # SHIELD_CORNE_XIAO_V2_LEFT || SHIELD_CORNE_XIAO_V2_RIGHT
+endif
