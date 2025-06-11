@@ -119,7 +119,7 @@ nice_view_spi: &spi0 {
 	sharp: ls0xx@0 {
 		compatible = "sharp,ls0xx";
 		label = "DISPLAY";
-		spi-max-frequency = <2000000>;
+		spi-max-frequency = <1000000>;
 		reg = <0>;
 		width = <160>;
 		height = <68>;
