@@ -123,7 +123,7 @@ nice_view_spi: &spi0 {
 		reg = <0>;
 		width = <160>;
 		height = <68>;
-		disp-en-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; //testing setting this to 6 from 23
+		//disp-en-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>; //testing setting this to 6 from 23
 	};
 };
 
